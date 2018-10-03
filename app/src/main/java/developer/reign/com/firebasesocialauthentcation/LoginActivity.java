@@ -5,11 +5,9 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,7 +28,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.login_acitivty);
 
         auth = FirebaseAuth.getInstance();
 
@@ -115,7 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     public void navigateForgotPassword(View view) {
 
-        Intent intent=new Intent(this,ResetPasswordActivity.class);
+        Intent intent = new Intent(this, ResetPasswordActivity.class);
         startActivity(intent);
         finish();
     }
